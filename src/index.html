@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>硬件设备检测器</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 顶栏 -->
+    <header id="header">
+      <div class="header-left">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <h1>硬件设备检测器</h1>
+      </div>
+      <div class="header-right">
+        <label class="auto-toggle" title="每 5 秒自动扫描">
+          <input type="checkbox" id="autoScan">
+          <span class="toggle-track"></span>
+          <span class="toggle-label">自动检测</span>
+          <span class="toggle-interval">每 5 秒</span>
+        </label>
+        <button id="scanBtn" onclick="scan()">开始检测</button>
+      </div>
+    </header>
+
+    <!-- 统计卡片 -->
+    <section id="stats">
+      <div class="stat">
+        <span class="stat-value" id="totalCount">0</span>
+        <span class="stat-label">设备总数</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="usbCount">0</span>
+        <span class="stat-label">USB</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="btCount">0</span>
+        <span class="stat-label">蓝牙</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value" id="wmiCount">0</span>
+        <span class="stat-label">系统内置</span>
+      </div>
+      <div class="stat stat-time">
+        <span class="stat-value" id="lastScan">--</span>
+        <span class="stat-label">上次检测</span>
+      </div>
+    </section>
+
+    <!-- 设备列表 -->
+    <section id="device-section">
+      <div id="loading" class="msg" style="display:none;">
+        <div class="spinner"></div>
+        <span>正在检测...</span>
+      </div>
+      <div id="empty" class="msg">
+        <p>点击「开始检测」扫描设备</p>
+      </div>
+      <div id="device-grid"></div>
+    </section>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
