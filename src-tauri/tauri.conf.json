@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/nicegui/tauri/dev/tooling/cli/schema.json",
-  "productName": "硬件设备检测器",
+  "productName": "\u786c\u4ef6\u8bbe\u5907\u68c0\u6d4b\u5668",
   "version": "1.0.0",
   "identifier": "com.hardware.detector",
   "build": {
@@ -10,7 +10,7 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "硬件设备检测器",
+        "title": "\u786c\u4ef6\u8bbe\u5907\u68c0\u6d4b\u5668",
         "width": 900,
         "height": 680,
         "resizable": true,
@@ -23,7 +23,9 @@
   },
   "bundle": {
     "active": true,
-    "targets": ["nsis"],
+    "targets": [
+      "nsis"
+    ],
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",
@@ -35,6 +37,9 @@
       "webviewInstallMode": {
         "type": "offlineInstaller",
         "silent": true
+      },
+      "nsis": {
+        "installMode": "perMachine"
       }
     }
   }
