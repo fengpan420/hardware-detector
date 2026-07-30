@@ -32,10 +32,9 @@
       "icons/icon.ico"
     ],
     "windows": {
-      "nsis": {
-        "webviewInstallMode": {
-          "type": "offlineInstaller"
-        }
+      "webviewInstallMode": {
+        "type": "offlineInstaller",
+        "silent": true
       }
     }
   }
