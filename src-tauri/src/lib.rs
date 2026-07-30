@@ -253,7 +253,6 @@ fn translate_pnp_class(class: &str) -> String {
         "Computer" => "计算机".to_string(),
         "Decoder" => "解码器".to_string(),
         "Diagnostic" => "诊断设备".to_string(),
-        "Keyboard" => "键盘".to_string(),
         "Memory" => "内存".to_string(),
         _ => format!("{} 设备", class),
     }
